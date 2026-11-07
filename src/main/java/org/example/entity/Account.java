@@ -1,12 +1,10 @@
 package org.example.entity;
 
-import java.math.BigDecimal;
-
 public class Account {
     private final Long id;
-    private BigDecimal balance;
+    private Balance balance;
 
-    public Account(Long id, BigDecimal balance) {
+    public Account(Long id, Balance balance) {
         this.id = id;
         this.balance = balance;
     }
@@ -15,15 +13,15 @@ public class Account {
         return id;
     }
 
-    public BigDecimal getBalance() {
+    public Balance getBalance() {
         return balance;
     }
 
-    public void deposit(BigDecimal amount) {
-        balance = balance.add(amount);
+    public void deposit(Money money) {
+        balance = balance.add(money);
     }
 
-    public void withdraw(BigDecimal amount) {
-        balance = balance.subtract(amount);
+    public void withdraw(Money money) {
+        balance = balance.subtract(money);
     }
 }
