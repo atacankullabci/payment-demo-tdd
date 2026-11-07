@@ -2,12 +2,11 @@ package org.example;
 
 import org.example.entity.MoneyTransfer;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MoneyTransferRepository {
-    private final Map<UUID, MoneyTransfer> moneyTransferLedger = new HashMap<>();
+    private final ConcurrentHashMap<UUID, MoneyTransfer> moneyTransferLedger = new ConcurrentHashMap<>();
 
     public MoneyTransfer get(UUID uuid) {
         return moneyTransferLedger.get(uuid);

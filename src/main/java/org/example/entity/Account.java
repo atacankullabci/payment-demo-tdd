@@ -1,11 +1,13 @@
 package org.example.entity;
 
+import java.util.Objects;
+
 public class Account {
     private final Long id;
     private Balance balance;
 
     public Account(Long id, Balance balance) {
-        this.id = id;
+        this.id = Objects.requireNonNull(id);
         this.balance = balance;
     }
 
