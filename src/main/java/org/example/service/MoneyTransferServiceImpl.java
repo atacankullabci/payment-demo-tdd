@@ -9,7 +9,6 @@ import org.example.exception.InsufficientBalanceException;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class MoneyTransferServiceImpl implements MoneyTransferService {
 
